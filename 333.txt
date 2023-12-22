@@ -1,0 +1,9 @@
+# Fibonachi -> 0,1,1,2,3,5,8,13,...
+
+def fibonachi(n:int)->list:
+    fib = [0,1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib
+
+print(fibonachi(10))
