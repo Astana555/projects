@@ -1,0 +1,11 @@
+/* pets/static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Добавьте стили по вашему усмотрению */

@@ -1,0 +1,74 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Домашние питомцы
+{% endblock %}
+
+{% block content %}
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+    <h1>Мои домашние питомцы</h1>
+
+    <table>
+        <tr>
+            <th>Фотография</th>
+            <th>Вид</th>
+            <th>Имя</th>
+            <th>Характеристики</th>
+        </tr>
+        <tr>
+            <td><img src="main/img/dog1.jpg" alt="Летун"></td>
+            <td>Собака</td>
+            <td>Летун</td>
+            <td>Чаочао, 3 года</td>
+        </tr>
+        <tr>
+            <td><img src="main/img/dog2.jpg" alt="Рекс"></td>
+            <td>Собака</td>
+            <td>Рекс</td>
+            <td>Немецкая овчарка, 4 года</td>
+        </tr>
+        <tr>
+            <td><img src="main/img/dog3.jpg"  alt="Аксель"></td>
+            <td>Собака</td>
+            <td>Аксель</td>
+            <td>Шотландская овчарка, 5 лет</td>
+        </tr>
+        <tr>
+            <td><img src="main/img/cat1.jpg" alt="Суперкот"></td>
+            <td>Кошка</td>
+            <td>Суперкот</td>
+            <td>Сиамская, 4 года</td>
+        </tr>
+        <tr>
+            <td><img src="main/img/cat2.jpg" alt="Чайка"></td>
+            <td>Кошка</td>
+            <td>Чайка</td>
+            <td>Дворняга, 3 года</td>
+        </tr>
+        <tr>
+            <td><img src="main/img/cat3.jpg" alt="Уайт"></td>
+            <td>Кошка</td>
+            <td>Уайт</td>
+            <td>Сибирская, 2 года</td>
+        </tr>
+    </table>
+{% endblock %}
+
