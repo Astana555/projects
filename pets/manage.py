@@ -20,15 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# petcatalog/manage.py
-import os
-import sys
-
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pets.settings")  # Обновленный путь
-
-    from django.core.management import execute_from_command_line
-
-    execute_from_command_line(sys.argv)

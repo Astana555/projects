@@ -70,5 +70,31 @@
             <td>Сибирская, 2 года</td>
         </tr>
     </table>
-{% endblock %}
 
+<h2>Свяжитесь с нами по обратной связи:</h2>
+
+<form action="/submit_form" method="post">
+    <!-- Имя -->
+    <label for="name">ФИО: </label>
+    <input type="text" id="name" name="name" required>
+
+    <br>
+
+    <!-- Email -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <!-- Сообщение -->
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <br>
+
+    <!-- Кнопка отправки формы -->
+    <button type="submit">Подтвердить</button>
+</form>
+
+
+{% endblock %}

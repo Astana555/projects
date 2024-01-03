@@ -1,5 +1,18 @@
-<form method="post" action="{% url 'feedback' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Форма обратной связи
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Feedback Form</h1>
+    <form method="post" action="{% url 'feedback' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
     <button type="submit">Отправить отзыв</button>
-</form>
+    </form>
+</div>
+
+<a href="http://127.0.0.1:8000/">На главную страницу</a>
+{% endblock %}

@@ -1,14 +1,14 @@
-
-#на пересмотр
-
-# pets/forms.py
 from django import forms
 from .models import Feedback
+from django.core.exceptions import ValidationError
 
 class FeedbackForm(forms.ModelForm):
     class Meta:
         model = Feedback
         fields = ['name', 'email', 'message']
+        widgets = {
+            'message': forms.Textarea(attrs={'rows': 4}),
+        }
 
     def clean_email(self):
         email = self.cleaned_data['email']

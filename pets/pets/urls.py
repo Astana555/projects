@@ -8,15 +8,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
-
-'''
-пока не надо
-#!!!from .views import feedback_view
-...
-    path('feedback/', feedback_view, name='feedback_page'),
-    # Добавьте другие URL-пути, если необходимо
-]
-'''
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import *
+from .forms import FeedbackForm
 
 def index(request):
     return render(request, 'main/feedback.html')
@@ -7,29 +9,23 @@ def index(request):
 def about(request):
     return HttpResponse("<h4>Страница про нас</h4>")
 
-
-
-
-
-
-#на пересмотр мне
-
-'''
-# Create your views here.
-
-# pets/views.py
-from django.shortcuts import render, redirect
-from .forms import FeedbackForm
-
-def feedback_view(request):
+def feedback(request):
     if request.method == 'POST':
         form = FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_page')
-    else:
-        form = FeedbackForm()
+            return render(request, 'success.html')
+        else:
+            form = FeedbackForm()
+        return render(request, 'feedback.html', {'form': form})
 
-    return render(request, 'feedback.html', {'form': form})
-'''
+def error_page(request):
+    return render(request, 'error.html')
+
+
+# Create your views here.
+def feedback(request):
+    cats = Pet.objects.filter(type='cat')
+    dogs = Pet.objects.filter(type='dog')
+    return render(request, 'feedback.html', {'cats': cats, 'dogs': dogs})
 
